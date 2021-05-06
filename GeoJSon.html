@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <body style="background-color:rgb(242, 247, 242);"></body>
+    <title>Übung 2.</title>
+    <h1 style="text-align:center;">
+        Geosoftware I - Übung 2, Henning Sander
+    </h1>
+    <h2>
+        Calculate route:
+    </h2>
+    <script src="GeoJson.js"></script>
+    <script src="polygon.js"></script>
+    <script src="route.js"></script>
+</head>
+<body> 
+    <div id="input">
+    <p> Insert your GeoJSON LineString [lng, lat] here. </p>
+    <textarea id="inputGeoJson" name="inputGeoJson" rows="15", cols="100", placeholder="Insert coordinates", autofocus></textarea>
+    </div>
+    <form>
+        <input type="button" onclick="toJS(inputGeoJson)" value="Calculate route">
+        <input type="button" onclick="oldGeoJsonPolygon(polygon)" value="Old Polygon GeoJSON">
+        <input type="button" onclick="oldGeoJsonRoute(route)" value="Old Route GeoJson">
+    </form>
+    <p>
+        The length of the route is: <br>
+    <span id="ergebnis"></span>
+    </p>
+    <p>
+        Old Polygon GeoJson: <br>
+        <span id="ergebnis2"></span>
+    </p>
+    <p>
+        Old Route GeoJson: <br>
+        <span id="ergebnis3"></span>
+    </p>
+
+
+</body>
+</html>
